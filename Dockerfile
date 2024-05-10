@@ -3,7 +3,7 @@
 FROM jupyter/pyspark-notebook
 
 # set the working dirctory and copy all
-WORKDIR /sf_de_assignment
+#WORKDIR /etl_dir
 COPY . .
 
 # install the dependencies

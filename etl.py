@@ -31,7 +31,7 @@ def exe_etl():
         # Extract stage    
         try:
             logging.info(" Extracting from source ....")
-            extracted_cust_orders_df,extracted_records_count  = extract(SPARK,"CSV","data/source/data.csv")
+            extracted_cust_orders_df,extracted_records_count  = extract(SPARK,"CSV","myetl_data/source/data.csv")
             extracted_cust_orders_df.show()
             logging.info(f" - Number of records extracted: {extracted_records_count}")
             logging.info(f" Finished extracting from source. \n")
@@ -52,7 +52,7 @@ def exe_etl():
 
         # Load stage     
         try:
-            table = "shawan_data/sink/CustomerOrders"
+            table = "myetl_data/sink/CustomerOrders"
             logging.info(" Loading to Delta Table ....")
             loaded_records_count  = load(transformed_cust_orders_df,table)
             logging.info(f" - Table {table} loaded. Number of records: {loaded_records_count}")

@@ -1,7 +1,7 @@
-# Building a Dockerized PySpark ETL Pipeline with Delta Table
+# Building a Dockerized PySpark ETL Pipeline with Delta Table. 
 
 
-The pipeline extracts data from data.csv, transform it and load to Sparks Delta Table 
+The pipeline extracts data from data.csv, transform it and load to Sparks Delta Table. See the Brief.
 
 ## Table of Contents
 
@@ -30,6 +30,7 @@ The pipeline extracts data from data.csv, transform it and load to Sparks Delta 
 
 The project follows the following structure:
 
+```bash
 Code language: Python (python)
 project/
 ├── etl.py
@@ -48,6 +49,8 @@ project/
 └── .ignore files...
 
 
+
+
 ## Docker
 
 To run Docker:
@@ -55,6 +58,7 @@ To run Docker:
 ```python
 docker build -t etl_image .
 docker run --name shawan_app etl_image
+```
 
 ## Contact Information
 shawan.faily@azuresystems.co.uk
